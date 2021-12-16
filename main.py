@@ -2,7 +2,8 @@ import os
 import keyboard
 
 from puzzles import binary_diagnostic, dive, giant_squid, hydrothermal_venture, lanternfish, the_treachery_of_whales, \
-    seven_segment_search, smoke_basin, syntax_scoring, dumbo_octopus, passage_pathing, transparent_origami
+    seven_segment_search, smoke_basin, syntax_scoring, dumbo_octopus, passage_pathing, transparent_origami, \
+    extended_polymerization
 
 selected = 1
 puzzles = [
@@ -18,7 +19,8 @@ puzzles = [
     "Syntax Scoring",
     "Dumbo Octopus",
     "Passage Pathing",
-    "Transparent Origami"
+    "Transparent Origami",
+    "Extended Polymerization"
 ]
 
 
@@ -54,6 +56,7 @@ def down():
 
 def select():
     print('\n\nPuzzle result day {0}:'.format(selected))
+    print('---------------------------')
     match selected:
         case 1:
             print('Not yet implemented')
@@ -81,6 +84,8 @@ def select():
             passage_pathing.solve()
         case 13:
             transparent_origami.solve()
+        case 14:
+            extended_polymerization.solve()
 
 
 show_menu()
