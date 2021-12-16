@@ -2,7 +2,7 @@ import os
 import keyboard
 
 from puzzles import binary_diagnostic, dive, giant_squid, hydrothermal_venture, lanternfish, the_treachery_of_whales, \
-    seven_segment_search, smoke_basin, syntax_scoring, dumbo_octopus
+    seven_segment_search, smoke_basin, syntax_scoring, dumbo_octopus, passage_pathing
 
 selected = 1
 puzzles = [
@@ -16,7 +16,8 @@ puzzles = [
     "Seven Segment Search",
     "Smoke Basin",
     "Syntax Scoring",
-    "Dumbo Octopus"
+    "Dumbo Octopus",
+    "Passage Pathing"
 ]
 
 
@@ -75,6 +76,8 @@ def select():
             syntax_scoring.solve()
         case 11:
             dumbo_octopus.solve()
+        case 12:
+            passage_pathing.solve()
 
 
 show_menu()
